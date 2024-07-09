@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Article Management System - Edgecom Energy Coding Challange
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -11,60 +11,38 @@ In the project directory, you can run:
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+# Develop a dashboard to manage articles with these rules:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+-There is no API. You have to mock the API in a separate layer in the code. So, we -can replace it with a real API without touching other parts of your code.
+-The edit page and Delete confirmation dialog need to be included.
+-You must check user mistakes on filling in forms (like email address, required fields, etc.).
+-Protected pages should not be available for guest users.
+-Wysiwyg editor is not required.
+-Tags field is a combobox which you can select some tags or use custom tags.
+-Design them based on your assumption
 
-### `npm run build`
+# General Requirements
+-Use ReactJS
+-Write necessary tests, but not with high coverage.
+-Remove all unused codes if you use a boilerplate or framework.
+-Write an instruction to run the project.
+-All pages and components should be responsive.
+-Do anything else that can impress us, but don’t overwork.
+-You should use a linter like PrettierJS or any others.
+-Don’t commit the .vscode or .idea directory.
+-Mention the required NodeJS version
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# requirements checklist
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Article management system
+add (create article)
+edit/delete (edit/delete article)
+details page (show details of selected article)
+homepage (show cards of all articles)
+responsive in all devices
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+routing
+API (axios)
