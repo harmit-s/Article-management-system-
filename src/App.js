@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Header/Header';
-import MainArticle from './pages/MainArticle/MainArticle';
+import Dashboard from './pages/Dashboard/Dashboard';
 import CreateArticle from './pages/CreateArticle/CreateArticle';
 
 import './styles/partials/globals.scss';
@@ -12,8 +12,8 @@ function App() {
       <div className="App">
         <Header />
         <Routes>
-          <Route path="/" element={<MainArticle />} />
-          <Route path="/articles/:articleId" element={<MainArticle />} />
+          <Route path="/" element={<Dashboard />} />
+          <Route path="/articles/:articleId" element={<Dashboard />} />
           <Route path="/create" element={<CreateArticle />} />
         </Routes>
       </div>

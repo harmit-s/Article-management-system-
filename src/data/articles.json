@@ -2,12 +2,14 @@
     {
       "id": 1,
       "title": "First Article",
+      "author": "author@example.com",
       "content": "This is the content of the first article.",
       "tags": ["react", "javascript"]
     },
     {
       "id": 2,
       "title": "Second Article",
+      "author": "author2@example.com",
       "content": "This is the content of the second article.",
       "tags": ["frontend", "webdev"]
     }

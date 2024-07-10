@@ -1,2 +1,114 @@
 @import '../../styles/partials/colors.scss';
 @import '../../styles/partials/mixins.scss';
+
+.header {
+    background: #181818;
+    width: 100%;
+    height: 9.5rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 1.5rem 1rem 1rem 1rem;
+
+    &__logo-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+    }
+
+    &__title {
+        font-size: 1rem;
+        font-weight: 600;
+        color: $white;
+        margin: 0;
+        text-align: center;
+        width: 10rem;
+    }
+
+    &__logo {
+        width: 2.75rem;
+        border-radius: .625rem;
+
+    }
+
+    &__nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 80%;
+        padding-top: .3rem;
+
+        a {
+            font-size: 1.375rem;
+            color: #4d4d4e;
+            height: 3.1875rem;
+            display: block;
+            line-height: 3.1875rem;
+            position: relative;
+            text-decoration: none;
+    
+            i {
+                transition: all 0.3s ease-out;
+            }
+    
+            &:hover {
+                color: $yellow;
+    
+                svg {
+                    opacity: 0;
+                }
+    
+                &:after {
+                    opacity: 1;
+                }
+            }
+    
+            &:after {
+                content: '';
+                font-size: .7625rem;
+                letter-spacing: .125rem;
+                display: block;
+                text-align: center;
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                opacity: 0;
+                transition: all 0.3s ease-out;
+            }
+    
+            &:first-child {
+                &::after {
+                    content: "HOME"
+                }
+            }
+        }
+
+        a.header__icon2 {
+            &:after {
+                content: "CREATE ARTICLE";
+                line-height: 1.5rem;
+            }
+        }
+
+        a.header__icon3 {
+            &:after {
+                content: "PROFILE"
+            }
+        }
+
+        a.active {
+            svg {
+                color: $yellow;
+            }
+        }
+    }
+
+    &__logout-btn {
+        background-color: transparent;
+        border: none;
+        color: $white;
+        align-self: flex-end;
+        font-size: .75rem;
+    }
+}
