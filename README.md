@@ -45,4 +45,7 @@ responsive in all devices
 
 
 routing
-API (axios)
+mock API (axios)
+
+Unable to finish the protected routes due to lack of time
+NodeJS not used, created a mock API in the frontend.
