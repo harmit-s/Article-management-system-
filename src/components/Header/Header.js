@@ -9,15 +9,20 @@ import './Header.scss';
 function Header() {
   const navigate = useNavigate();
 
+  const handleLogout = () => {
+    localStorage.removeItem('token');
+    navigate('/');
+  };
+
 
   return <header className="header">
-    <Link to="/" className="header__logo-link">
+    <Link to="/dashboard" className="header__logo-link">
       <img className='header__logo' src={amsLogo} alt='logo' />
       <h1 className="header__title">Article Management System</h1>
     </Link>
 
     <nav className="header__nav">
-    <NavLink exact="true" activeclassname="active" to="/">
+    <NavLink exact="true" activeclassname="active" to="/dashboard">
                     <FontAwesomeIcon icon={faHome} color="#4d4d4e" />
                 </NavLink>
                 <NavLink exact="true" activeclassname="active" className="header__icon2" to="/create">
@@ -28,10 +33,8 @@ function Header() {
                 </NavLink>
                 
     </nav>
-    <button className="header__logout-btn" onClick={() => {
-      localStorage.removeItem('token');
-      navigate("/");
-    }}><FontAwesomeIcon icon={faPowerOff} color="#d22d2d" /> Logout</button>
+    <button className="header__logout-btn" onClick={handleLogout}>
+    <FontAwesomeIcon icon={faPowerOff} color="#d22d2d" /> Logout</button>
   </header>;
 }
 
