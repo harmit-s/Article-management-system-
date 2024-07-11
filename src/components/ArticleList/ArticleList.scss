@@ -5,6 +5,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+    min-height: 100vh;
 
 
     &__title {
@@ -24,6 +26,7 @@
             font-size: 2.5rem;
             margin: 1rem 0 0 0;
         }
+
         @include desktop {
             font-size: 3rem;
             letter-spacing: .8rem;
@@ -44,6 +47,7 @@
         border-radius: 50%;
         margin-bottom: .5rem;
         margin-right: .5rem;
+
         @include desktop {
             width: 5rem;
         }
@@ -57,9 +61,11 @@
         display: flex;
         flex-direction: column;
         width: 100%;
+
         @include tablet {
             padding: 1.5rem;
         }
+
         @include desktop {
             padding: 2rem 3.5rem;
         }
@@ -69,6 +75,7 @@
         display: flex;
         border-bottom: 2px solid $black;
         position: relative;
+
         @include tablet {
             justify-content: space-between;
             align-items: center;
@@ -79,9 +86,11 @@
         font-size: .9rem;
         font-weight: 600;
         display: contents;
+
         @include tablet {
             font-size: 1.2rem;
         }
+
         @include desktop {
             font-size: 1.5rem;
         }
@@ -91,10 +100,12 @@
         border-bottom: 2px solid $darkgreen;
         padding-bottom: 1rem;
         margin-bottom: 0;
+
         @include tablet {
             font-size: 1.25rem;
             margin-top: .5rem;
         }
+
         @include desktop {
             font-size: 1.5rem;
             margin-top: 1rem;
@@ -105,6 +116,7 @@
         @include tablet {
             font-size: 1rem;
         }
+
         @include desktop {
             font-size: 1.5rem;
         }
@@ -114,6 +126,7 @@
         @include tablet {
             font-size: 1.25rem;
         }
+
         @include desktop {
             font-size: 1.75rem;
         }
@@ -123,24 +136,28 @@
         align-self: flex-end;
         font-style: italic;
         margin: .5rem 0 0 0;
+
         @include tablet {
             font-size: 1rem;
         }
+
         @include desktop {
             font-size: 1.5rem;
         }
     }
 
-    &__edit, a {
+    &__edit,
+    a {
         font-size: 1.2rem;
         color: #4d4d4e;
         height: 3.1875rem;
         display: block;
         line-height: 3.1875rem;
         position: absolute;
-        top:3.5rem;
-        right:0;
-        @include tablet {
+        top: 3.5rem;
+        right: 0;
+
+        @include desktop {
             font-size: 2rem;
             top: 7rem;
         }
@@ -150,14 +167,17 @@
         height: 1.5rem;
         border: none;
         background-color: transparent;
+
         @include tablet {
             font-size: 1.25rem;
         }
+
         @include desktop {
             font-size: 2rem;
-           margin-bottom: 1rem;;
+            margin-bottom: 1rem;
+            ;
         }
-        
+
         &:hover {
             background-color: $error;
             color: $white;
@@ -165,4 +185,57 @@
         }
     }
 
+    &__overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); 
+        z-index: 1000; 
+      }
+    
+      .modal {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        z-index: 1010; 
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+        .modal-content {
+          text-align: center;
+    
+          h2 {
+            margin-bottom: 10px;
+            color: $error;
+          }
+    
+          p {
+            margin-bottom: 20px;
+            color: $black;
+            font-size: 1rem;
+            font-weight: 600;
+          }
+    
+          button {
+            margin: 0 10px;
+            padding: 8px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 16px;
+            transition: background-color 0.3s ease; 
+    
+            &:hover {
+              background-color: #45a049;
+            }
+          }
+        }
+      }
+    
 }
