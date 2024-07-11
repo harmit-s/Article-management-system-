@@ -2,86 +2,86 @@
 @import '../../styles/partials/mixins.scss';
 
 .edit {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
 
-    &__title {
-        font-size: 2rem;
-        margin-bottom: 1rem;
+  &__title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+
+  }
+
+  &__subtitle {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+  }
+
+  &__input[type='text'],
+  &__textarea {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  &__textarea {
+    min-height: 9.375rem;
+    resize: vertical;
+  }
+
+  &__button {
+    padding: 0.75rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #0056b3;
+    }
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal {
+  background-color: white;
+  padding: 1.25rem;
+  border-radius: .5rem;
+  z-index: 1010;
+
+  .modal-content {
+    text-align: center;
+
+    h2 {
+      margin-bottom: .625rem;
     }
 
-    &__form {
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 1rem;
-
+    p {
+      margin-bottom: 1.25rem;
     }
-
-    &__subtitle {
-        font-weight: 600;
-        margin-bottom: 0.5rem;
-        font-size: 1.25rem;
-    }
-
-    &__input[type='text'],
-    &__textarea {
-        width: 100%;
-        padding: 0.5rem;
-        font-size: 1rem;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-    }
-
-    &__textarea {
-        min-height: 9.375rem;
-        resize: vertical;
-    }
-
-    &__button {
-        padding: 0.75rem;
-        background-color: #007bff;
-        color: white;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        font-size: 1rem;
-        transition: background-color 0.3s ease;
-
-        &:hover {
-            background-color: #0056b3;
-        }
-    }
-
-    .overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        z-index: 1000;
-      }
-      
-      .modal {
-        background-color: white;
-        padding: 1.25rem;
-        border-radius: .5rem;
-        z-index: 1010;
-      
-        .modal-content {
-          text-align: center;
-      
-          h2 {
-            margin-bottom: .625rem;
-          }
-      
-          p {
-            margin-bottom: 1.25rem;
-          }
-        }
-      }
+  }
 }

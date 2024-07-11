@@ -46,7 +46,7 @@ function CreateArticle() {
       setTags('');
 
       setTimeout(() => {
-        navigate('/'); 
+        navigate('/dashboard'); 
       }, 2000);
     } catch (error) {
       console.error('Error submitting article:', error);

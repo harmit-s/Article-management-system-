@@ -66,7 +66,7 @@ const EditArticle = () => {
       setShowSuccessModal(true); 
       setTimeout(() => {
         setShowSuccessModal(false);
-        navigate('/'); 
+        navigate('/dashboard'); 
       }, 3000); 
     } catch (error) {
       console.error('Failed to update article:', error);
